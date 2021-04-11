@@ -24,7 +24,8 @@ export class UsersComponent implements OnInit {
     this.service
         .users()
         .subscribe((response: any) => {
-          this.allUsers = response.data;
+          this.allUsers = response;
+          console.log(this.allUsers);
         });
   }
 
