@@ -9,6 +9,6 @@ export class UsersService {
   constructor(private http: HttpClient) { }
 
   users() {
-    this.http.get('https://jsonplaceholder.typicode.com/users');
+    return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
 }
