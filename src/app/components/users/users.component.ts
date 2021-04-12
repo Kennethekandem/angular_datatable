@@ -44,7 +44,6 @@ export class UsersComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.dtTrigger.unsubscribe();
-
     $.fn.dataTable.ext.search.pop();
   }
 
