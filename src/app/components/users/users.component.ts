@@ -23,6 +23,7 @@ export class UsersComponent implements OnInit, OnDestroy {
   constructor(private service: UsersService) { }
 
   ngOnInit(): void {
+    this.users();
     $.fn.dataTable.ext.search.push((settings: any, data: string[], dataIndex: any) => {
       const id = parseFloat(data[0]) || 0; // use data for the id column
       return (Number.isNaN(this.min) && Number.isNaN(this.max)) ||
@@ -30,8 +31,6 @@ export class UsersComponent implements OnInit, OnDestroy {
           (this.min <= id && Number.isNaN(this.max)) ||
           (this.min <= id && id <= this.max);
     });
-
-    this.users();
   }
 
   users(): void {
