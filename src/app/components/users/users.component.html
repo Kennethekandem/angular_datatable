@@ -1,6 +1,18 @@
 <div class="container">
     <div class="card m-5 p-3">
         <div class="card-body">
+            <form (submit)="filterById()">
+                <label>
+                    Min
+                    <input type="number" name="min" id="min" [(ngModel)]="min" />
+                </label>
+                <label>
+                    Max
+                    <input type="number" name="max" id="max" [(ngModel)]="max" />
+                </label>
+                <button class="btn btn-primary" type="submit">Filter by ID</button>
+            </form>
+            <br />
             <table class="table table-bordered table-striped table-hover" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
                 <thead>
                 <tr>

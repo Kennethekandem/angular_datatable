@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {DataTablesModule} from 'angular-datatables';
 import { UsersComponent } from './components/users/users.component';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     DataTablesModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
