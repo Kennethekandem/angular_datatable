@@ -31,6 +31,12 @@ export class UsersComponent implements OnInit, OnDestroy {
           (this.min <= id && Number.isNaN(this.max)) ||
           (this.min <= id && id <= this.max);
     });
+
+
+    this.dtOptions = {
+      // Declare the use of the extension in the dom parameter
+      dom: 'Bfrtip',
+    };
   }
 
   users(): void {
